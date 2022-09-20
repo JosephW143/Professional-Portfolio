@@ -51,11 +51,43 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
+.flex .aboutMe {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutMe img {
+    height: 300px;
+    max-width: 100%;
+}
+
 section {
     padding: 60px;
 }
 
-.project {
+.centerPiece {
+    display: flex;
+    flex-wrap: wrap;
+    height: 350px;
+    width: 100%;
+    padding: 15px;
+}
+
+.centerPiece img {
+    position: relative;
+    max-height: 600px;
+    min-height: 600px;
+    max-width: 750px;
+    min-width: 350px;
+    background-position: 75%;
+    width: 100%;
+}
+
+.centerBox {
+    flex: 3;
+}
+
+.projectBox {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
@@ -65,19 +97,24 @@ section {
     justify-content: space-between;
 }
 
-.project img {
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    min-width: 200px;
-    max-height: 200px;
+.projectBox img {
+    position: relative;
+    max-height: 400px;
     min-height: 200px;
+    max-width: 200px;
+    min-width: 200px;
+    background-position: 75%;
 }
 
 .project h3 {
     font-size: 46px;
     flex: 1 30%;
   }
+
+.container {
+    flex: 1;
+    padding: 25px
+}
 
 footer {
     background: var(--primary-color);
