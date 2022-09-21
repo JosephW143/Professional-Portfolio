@@ -1,3 +1,8 @@
+:root {
+    --mainColor: rgba(204, 204, 255, 0.75);
+    --secondaryColor: rgba(204, 238, 255, 0.75);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +11,20 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--mainColor);
 }
 
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-image: url();
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-attachment: fixed;
     background-position: 80%;
     z-index: 9999;
+    background-image: url(../images/eucalyptus.jpg);
+    border-bottom: var(--secondaryColor) solid 5px;
 }
 
 header h1 {
@@ -27,6 +34,8 @@ header h1 {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 15px;
     width: 100%;
+    background-color: var(--secondaryColor);
+    border-radius: 30px;
 }
 
 .title {
@@ -51,6 +60,12 @@ header nav ul {
   list-style: none;
 }
 
+header nav ul li {
+    background-color: var(--secondaryColor);
+    padding: 10px;
+    border-radius: 30px;
+}
+
 header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
@@ -63,21 +78,57 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
-.flex .aboutMe {
+.flex {
     display: flex;
     flex-wrap: wrap;
 }
 
+.aboutMe {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px
+}
+
 .aboutMe img {
-    height: 300px;
+    height: 200px;
     max-width: 100%;
+    border-radius: 20px;
+    float: left;
+    border: var(--secondaryColor) solid 5px;
+}
+
+.aboutMe article {
+    background-color: var(--secondaryColor);
+    border-radius: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.aboutContent {
+    float: right;
+}
+
+.aboutContent article {
+    margin: 20px;
+}
+
+.sectionTitle {
+    text-align: center;
+    text-decoration-color: rgb(102, 102, 102);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.projectTitle {
+    position: absolute;
+    color: rgba(0, 0, 0, 1);
+    background-color: var(--secondaryColor);
+    border-radius: 30px;
 }
 
 section {
     padding: 60px;
 }
 
-.projectTitle {
+#projects {
     text-align: center;
 }
 
@@ -86,17 +137,20 @@ section {
     flex-wrap: wrap;
     width: 100%;
     padding: 15px;
+    height: 500px;
     justify-content: center;
 }
 
-.centerPiece img {
+.centerPiece img  {
     position: relative;
-    max-height: 600px;
-    min-height: 600px;
+    height: 500px;
+    min-height: 500px;
     max-width: 750px;
-    min-width: 350px;
-    background-position: 75%;
+    min-width: 750px;
     width: 100%;
+    border-radius: 20px;
+    background-position: 75%;
+    border: var(--secondaryColor) solid 5px;
 }
 
 .centerBox {
@@ -115,17 +169,20 @@ section {
 
 .projectBox img {
     position: relative;
-    max-height: 400px;
-    min-height: 200px;
-    max-width: 200px;
-    min-width: 200px;
+    max-height: 250px;
+    min-height: 250px;
+    max-width: 400px;
+    min-width: 400px;
     background-position: 75%;
+    border-radius: 20px;
+    border: var(--secondaryColor) solid 5px;
 }
 
 .project h3 {
     font-size: 46px;
     flex: 1 30%;
   }
+
 
 .container {
     flex: 1;
@@ -137,15 +194,36 @@ display: flex;
 }
 
 .spacer {
-padding: 10px;
+padding: 20px;
 flex: 1;
 }
 
 footer {
-    background: var(--primary-color);
     width: 100%;
     padding: 40px 35px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    z-index: 9999;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(../images/eucalyptus.jpg);
+    border-top: var(--secondaryColor) solid 5px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li a {
+    font-weight: lighter;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+footer ul li a:hover {
+    border-radius: 15px;
+    text-shadow: none;
 }
