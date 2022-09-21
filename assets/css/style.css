@@ -22,7 +22,7 @@ header {
     background-position: center;
     background-attachment: fixed;
     background-position: 80%;
-    z-index: 9999;
+    z-index: -1;
     background-image: url(../images/eucalyptus.jpg);
     border-bottom: var(--secondaryColor) solid 5px;
 }
@@ -151,6 +151,15 @@ section {
     border-radius: 20px;
     background-position: 75%;
     border: var(--secondaryColor) solid 5px;
+    -webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.centerPiece:hover img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
 }
 
 .centerBox {
@@ -178,6 +187,18 @@ section {
     border: var(--secondaryColor) solid 5px;
 }
 
+.container img {
+    -webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.container:hover img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
 .project h3 {
     font-size: 46px;
     flex: 1 30%;
@@ -187,6 +208,10 @@ section {
 .container {
     flex: 1;
     padding: 25px
+}
+
+.contain img:hover {
+    opacity: 0.5;
 }
 
 .buffer {
@@ -204,7 +229,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    z-index: 9999;
+    z-index: -1;
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
